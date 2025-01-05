@@ -14,13 +14,15 @@ const convertBtn = document.querySelector(".convert-btn");
 
 convertBtn.addEventListener("click", function () {
   let convertNum = inputBox.value;
-  length.innerHTML = `${convertNum} meters = ${(convertNum * 3.281).toFixed(
-    3
-  )} feet | ${convertNum} feet = ${(convertNum / 3.281).toFixed(3)} meters`;
-  volume.innerHTML = `${convertNum} meters = ${(convertNum * 0.264).toFixed(
-    3
-  )} feet | ${convertNum} feet = ${(convertNum / 0.264).toFixed(3)} meters`;
-  mass.innerHTML = `${convertNum} meters = ${(convertNum * 2.204).toFixed(
-    3
-  )} feet | ${convertNum} feet = ${(convertNum / 2.204).toFixed(3)} meters`;
+  if (convertNum > 0) {
+    length.innerHTML = `${convertNum} meters = ${(convertNum * 3.281).toFixed(
+      3
+    )} feet | ${convertNum} feet = ${(convertNum / 3.281).toFixed(3)} meters`;
+    volume.innerHTML = `${convertNum} meters = ${(convertNum * 0.264).toFixed(
+      3
+    )} feet | ${convertNum} feet = ${(convertNum / 0.264).toFixed(3)} meters`;
+    mass.innerHTML = `${convertNum} meters = ${(convertNum * 2.204).toFixed(
+      3
+    )} feet | ${convertNum} feet = ${(convertNum / 2.204).toFixed(3)} meters`;
+  }
 });
